@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApiJWT.Models;
+using WebApp.Models;
 
 namespace WebApp.Migrations
 {
@@ -275,6 +276,7 @@ namespace WebApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
+            
 #pragma warning restore 612, 618
         }
     }
