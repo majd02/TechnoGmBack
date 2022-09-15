@@ -11,7 +11,6 @@ namespace TestApiJWT.Models
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-
         public DbSet<subtheme> subtheme { get; set; }
 
         public DbSet<theme> theme { get; set; }
@@ -113,5 +112,6 @@ namespace TestApiJWT.Models
              });
         }
 
+      
     }
 }

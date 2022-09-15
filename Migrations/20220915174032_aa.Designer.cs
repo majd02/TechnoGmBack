@@ -10,8 +10,8 @@ using TestApiJWT.Models;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220915170247_ab1")]
-    partial class ab1
+    [Migration("20220915174032_aa")]
+    partial class aa
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
