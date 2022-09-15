@@ -42,11 +42,7 @@ namespace WebApp
                 .AllowAnyMethod().AllowAnyHeader();
             }));
 
-            services.AddDbContext<SubthemeContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<ThemeContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            
 
             services.AddControllers();
             services.Configure<JWT>(Configuration.GetSection("JWT"));

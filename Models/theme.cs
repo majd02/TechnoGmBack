@@ -9,6 +9,8 @@ namespace WebApp.Models
     {
         public int ThemeID { get; set; }
         public String name { get; set; }
-            
+
+        public virtual List<subtheme> themes { get; set; }
+
     }
 }

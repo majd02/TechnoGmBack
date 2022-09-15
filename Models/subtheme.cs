@@ -12,5 +12,6 @@ namespace WebApp.Models
         public int subthemeId { get; set; }
         public String nom { get; set; }
         public theme theme { get; set; }
+        public int ThemeID { get; set; }
     }
 }

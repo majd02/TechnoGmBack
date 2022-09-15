@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestApiJWT.Models;
 using WebApp.Models;
 
 namespace WebApp.Controllers
@@ -13,8 +14,8 @@ namespace WebApp.Controllers
     [ApiController]
     public class ThemeController : ControllerBase
     { 
-        private readonly ThemeContext _context;
-        public ThemeController(ThemeContext context)
+        private readonly ApplicationDbContext _context;
+        public ThemeController(ApplicationDbContext context)
         {
             _context = context;
         }

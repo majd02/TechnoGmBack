@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestApiJWT.Models;
 using WebApp.Models;
 
 namespace WebApp.Controllers
@@ -14,8 +15,8 @@ namespace WebApp.Controllers
     public class SubthemeController : Controller
     {
 
-        private readonly SubthemeContext _context;
-        public SubthemeController(SubthemeContext context)
+        private readonly ApplicationDbContext _context;
+        public SubthemeController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -25,7 +26,7 @@ namespace WebApp.Controllers
         {
             return await _context.subtheme.ToListAsync();
         }
-        [Route("GetStateById/{themeid}")]
+        [Route("GetsubthemesById/{themeid}")]
         [HttpGet]
         public ActionResult<List<subtheme>> GetStateById(int themeid)
         {

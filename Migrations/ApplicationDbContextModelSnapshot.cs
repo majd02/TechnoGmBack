@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApiJWT.Models;
-using WebApp.Models;
 
 namespace WebApp.Migrations
 {
@@ -151,7 +150,7 @@ namespace WebApp.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("TestApiJWT.Models.ApplicationUser", b =>
+            modelBuilder.Entity("WebApp.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -226,6 +225,464 @@ namespace WebApp.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("WebApp.Models.subtheme", b =>
+                {
+                    b.Property<int>("subthemeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ThemeID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("nom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("subthemeId");
+
+                    b.HasIndex("ThemeID");
+
+                    b.ToTable("subtheme");
+
+                    b.HasData(
+                        new
+                        {
+                            subthemeId = 1,
+                            ThemeID = 1,
+                            nom = "Camping"
+                        },
+                        new
+                        {
+                            subthemeId = 2,
+                            ThemeID = 1,
+                            nom = "Hicking"
+                        },
+                        new
+                        {
+                            subthemeId = 3,
+                            ThemeID = 1,
+                            nom = "Prepare meals in nature"
+                        },
+                        new
+                        {
+                            subthemeId = 4,
+                            ThemeID = 1,
+                            nom = "walking"
+                        },
+                        new
+                        {
+                            subthemeId = 5,
+                            ThemeID = 1,
+                            nom = "hunt"
+                        },
+                        new
+                        {
+                            subthemeId = 6,
+                            ThemeID = 1,
+                            nom = "fishing"
+                        },
+                        new
+                        {
+                            subthemeId = 7,
+                            ThemeID = 1,
+                            nom = "sand diving"
+                        },
+                        new
+                        {
+                            subthemeId = 8,
+                            ThemeID = 1,
+                            nom = "Ski Palmier"
+                        },
+                        new
+                        {
+                            subthemeId = 9,
+                            ThemeID = 1,
+                            nom = "Back packing"
+                        },
+                        new
+                        {
+                            subthemeId = 10,
+                            ThemeID = 1,
+                            nom = "Night sky"
+                        },
+                        new
+                        {
+                            subthemeId = 11,
+                            ThemeID = 1,
+                            nom = "Back packing"
+                        },
+                        new
+                        {
+                            subthemeId = 12,
+                            ThemeID = 1,
+                            nom = "Nature and ecology tour"
+                        },
+                        new
+                        {
+                            subthemeId = 13,
+                            ThemeID = 1,
+                            nom = "plante et agriculture"
+                        },
+                        new
+                        {
+                            subthemeId = 14,
+                            ThemeID = 1,
+                            nom = "Activité plein air"
+                        },
+                        new
+                        {
+                            subthemeId = 15,
+                            ThemeID = 2,
+                            nom = "Beauté"
+                        },
+                        new
+                        {
+                            subthemeId = 16,
+                            ThemeID = 2,
+                            nom = "spa"
+                        },
+                        new
+                        {
+                            subthemeId = 17,
+                            ThemeID = 2,
+                            nom = "pleine conscience"
+                        },
+                        new
+                        {
+                            subthemeId = 18,
+                            ThemeID = 2,
+                            nom = "thérapie de corps"
+                        },
+                        new
+                        {
+                            subthemeId = 19,
+                            ThemeID = 2,
+                            nom = "Etat d’esprit"
+                        },
+                        new
+                        {
+                            subthemeId = 20,
+                            ThemeID = 2,
+                            nom = "Yoga"
+                        },
+                        new
+                        {
+                            subthemeId = 21,
+                            ThemeID = 2,
+                            nom = "santé holistique"
+                        },
+                        new
+                        {
+                            subthemeId = 22,
+                            ThemeID = 2,
+                            nom = "Divination"
+                        },
+                        new
+                        {
+                            subthemeId = 23,
+                            ThemeID = 2,
+                            nom = "Autre Expérience Bien-être"
+                        },
+                        new
+                        {
+                            subthemeId = 24,
+                            ThemeID = 3,
+                            nom = "cuisineet alimentation"
+                        },
+                        new
+                        {
+                            subthemeId = 25,
+                            ThemeID = 3,
+                            nom = "degustation gastronomique"
+                        },
+                        new
+                        {
+                            subthemeId = 26,
+                            ThemeID = 3,
+                            nom = "diner en groupe"
+                        },
+                        new
+                        {
+                            subthemeId = 27,
+                            ThemeID = 3,
+                            nom = "Visite de marché et gastronomie"
+                        },
+                        new
+                        {
+                            subthemeId = 28,
+                            ThemeID = 4,
+                            nom = "sport"
+                        },
+                        new
+                        {
+                            subthemeId = 29,
+                            ThemeID = 4,
+                            nom = "sycling"
+                        },
+                        new
+                        {
+                            subthemeId = 30,
+                            ThemeID = 4,
+                            nom = "Divertissement"
+                        },
+                        new
+                        {
+                            subthemeId = 31,
+                            ThemeID = 5,
+                            nom = "Cours sur l’entrepreneuriat"
+                        },
+                        new
+                        {
+                            subthemeId = 32,
+                            ThemeID = 5,
+                            nom = "Conférence culturelle"
+                        },
+                        new
+                        {
+                            subthemeId = 33,
+                            ThemeID = 5,
+                            nom = "Cours de langue "
+                        },
+                        new
+                        {
+                            subthemeId = 34,
+                            ThemeID = 5,
+                            nom = " Visite d’usine"
+                        },
+                        new
+                        {
+                            subthemeId = 35,
+                            ThemeID = 5,
+                            nom = "Visite de campagne "
+                        },
+                        new
+                        {
+                            subthemeId = 36,
+                            ThemeID = 5,
+                            nom = " Autre activité culturelle"
+                        },
+                        new
+                        {
+                            subthemeId = 37,
+                            ThemeID = 5,
+                            nom = " Cours de sciences "
+                        },
+                        new
+                        {
+                            subthemeId = 38,
+                            ThemeID = 5,
+                            nom = "conférence sur des enjeux sociaux"
+                        },
+                        new
+                        {
+                            subthemeId = 39,
+                            ThemeID = 5,
+                            nom = "Danse culturelle"
+                        },
+                        new
+                        {
+                            subthemeId = 40,
+                            ThemeID = 5,
+                            nom = "Visite culturelle "
+                        },
+                        new
+                        {
+                            subthemeId = 41,
+                            ThemeID = 5,
+                            nom = "visite de bureau"
+                        },
+                        new
+                        {
+                            subthemeId = 42,
+                            ThemeID = 5,
+                            nom = " Festival Culturelle"
+                        },
+                        new
+                        {
+                            subthemeId = 43,
+                            ThemeID = 5,
+                            nom = " Mariage traditionnelle"
+                        },
+                        new
+                        {
+                            subthemeId = 44,
+                            ThemeID = 5,
+                            nom = "tatouage traditionnelle "
+                        },
+                        new
+                        {
+                            subthemeId = 45,
+                            ThemeID = 5,
+                            nom = " Vivre une experience avec une famille"
+                        },
+                        new
+                        {
+                            subthemeId = 46,
+                            ThemeID = 6,
+                            nom = "SeaDiving"
+                        },
+                        new
+                        {
+                            subthemeId = 47,
+                            ThemeID = 6,
+                            nom = "Parachute"
+                        },
+                        new
+                        {
+                            subthemeId = 48,
+                            ThemeID = 6,
+                            nom = " Location pédale a eau/bateau"
+                        },
+                        new
+                        {
+                            subthemeId = 49,
+                            ThemeID = 6,
+                            nom = "Snorking"
+                        },
+                        new
+                        {
+                            subthemeId = 50,
+                            ThemeID = 6,
+                            nom = " Bataille d’eau "
+                        },
+                        new
+                        {
+                            subthemeId = 51,
+                            ThemeID = 6,
+                            nom = "Apprendre à nager"
+                        },
+                        new
+                        {
+                            subthemeId = 52,
+                            ThemeID = 6,
+                            nom = "sport nautrique"
+                        },
+                        new
+                        {
+                            subthemeId = 53,
+                            ThemeID = 6,
+                            nom = "chercher des coquillages "
+                        },
+                        new
+                        {
+                            subthemeId = 54,
+                            ThemeID = 6,
+                            nom = "Bâtir des châteaux de sable"
+                        },
+                        new
+                        {
+                            subthemeId = 55,
+                            ThemeID = 6,
+                            nom = "S’enterrer dans les sables"
+                        },
+                        new
+                        {
+                            subthemeId = 56,
+                            ThemeID = 6,
+                            nom = "Morpion dans le sable"
+                        },
+                        new
+                        {
+                            subthemeId = 57,
+                            ThemeID = 6,
+                            nom = "découvrir le chair à voile "
+                        },
+                        new
+                        {
+                            subthemeId = 58,
+                            ThemeID = 6,
+                            nom = "Jeux de ballon"
+                        },
+                        new
+                        {
+                            subthemeId = 59,
+                            ThemeID = 7,
+                            nom = "Jetski"
+                        },
+                        new
+                        {
+                            subthemeId = 60,
+                            ThemeID = 7,
+                            nom = "shooping"
+                        },
+                        new
+                        {
+                            subthemeId = 61,
+                            ThemeID = 7,
+                            nom = "boisson"
+                        },
+                        new
+                        {
+                            subthemeId = 62,
+                            ThemeID = 7,
+                            nom = "animaux"
+                        },
+                        new
+                        {
+                            subthemeId = 63,
+                            ThemeID = 7,
+                            nom = "gambling"
+                        },
+                        new
+                        {
+                            subthemeId = 64,
+                            ThemeID = 7,
+                            nom = "tour de bar"
+                        });
+                });
+
+            modelBuilder.Entity("WebApp.Models.theme", b =>
+                {
+                    b.Property<int>("ThemeID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ThemeID");
+
+                    b.ToTable("theme");
+
+                    b.HasData(
+                        new
+                        {
+                            ThemeID = 1,
+                            name = "nature"
+                        },
+                        new
+                        {
+                            ThemeID = 2,
+                            name = "health"
+                        },
+                        new
+                        {
+                            ThemeID = 3,
+                            name = "food"
+                        },
+                        new
+                        {
+                            ThemeID = 4,
+                            name = "event"
+                        },
+                        new
+                        {
+                            ThemeID = 5,
+                            name = "culture"
+                        },
+                        new
+                        {
+                            ThemeID = 6,
+                            name = "seaside"
+                        },
+                        new
+                        {
+                            ThemeID = 7,
+                            name = "autres"
+                        });
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -237,7 +694,7 @@ namespace WebApp.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("TestApiJWT.Models.ApplicationUser", null)
+                    b.HasOne("WebApp.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -246,7 +703,7 @@ namespace WebApp.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("TestApiJWT.Models.ApplicationUser", null)
+                    b.HasOne("WebApp.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -261,7 +718,7 @@ namespace WebApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TestApiJWT.Models.ApplicationUser", null)
+                    b.HasOne("WebApp.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -270,13 +727,28 @@ namespace WebApp.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("TestApiJWT.Models.ApplicationUser", null)
+                    b.HasOne("WebApp.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
-            
+
+            modelBuilder.Entity("WebApp.Models.subtheme", b =>
+                {
+                    b.HasOne("WebApp.Models.theme", "theme")
+                        .WithMany("themes")
+                        .HasForeignKey("ThemeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("theme");
+                });
+
+            modelBuilder.Entity("WebApp.Models.theme", b =>
+                {
+                    b.Navigation("themes");
+                });
 #pragma warning restore 612, 618
         }
     }
